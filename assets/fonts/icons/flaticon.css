@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?d31cd6ec5856553fe71cb495f3947d54") format("truetype"), url("./flaticon.woff?d31cd6ec5856553fe71cb495f3947d54") format("woff"), url("./flaticon.woff2?d31cd6ec5856553fe71cb495f3947d54") format("woff2"), url("./flaticon.eot?d31cd6ec5856553fe71cb495f3947d54#iefix") format("embedded-opentype"), url("./flaticon.svg?d31cd6ec5856553fe71cb495f3947d54#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-share:before {
+  content: "";
+}
+
+.flaticon-menu:before {
+  content: "";
+}
+
+.flaticon-direct-download:before {
+  content: "";
+}
+
+.flaticon-github:before {
+  content: "";
+}
+
+.flaticon-facebook-app-symbol:before {
+  content: "";
+}
+
+.flaticon-linkedin:before {
+  content: "";
+}
+
+.flaticon-user:before {
+  content: "";
+}
+
+.flaticon-pin:before {
+  content: "";
+}
+
+.flaticon-email:before {
+  content: "";
+}
+
+.flaticon-call:before {
+  content: "";
+}
+
+.flaticon-up-arrow-angle:before {
+  content: "";
+}
+/*# sourceMappingURL=flaticon.css.map */
