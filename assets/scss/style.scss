@@ -729,7 +729,7 @@
           transform: scale(1.1);
           filter: unset;
           background-color: $primary-bg;
-          // box-shadow: 0px 0px 10px 1px $black-color;
+          border-color: transparent;
 
           > .field__name {
             color: $white-color;

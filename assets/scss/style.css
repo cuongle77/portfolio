@@ -1090,6 +1090,7 @@ html {
   -webkit-filter: unset;
           filter: unset;
   background-color: #3c40c6;
+  border-color: transparent;
 }
 
 #skills .knowledge__skills__list li:hover > .field__name {
