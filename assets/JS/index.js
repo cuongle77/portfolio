@@ -2,10 +2,14 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 let itemLink = $$(".nav__content__icon__menu > li > a");
-let itemLinkSideBar = $$(".nav__content__icon__sidebar > a");
+let itemLinkSideBar = $$(".nav__content__icon__mobile__sidebar > a");
 let navIconMobileBtn = $(".nav__content__icon__mobile");
-let itemSideBar = $(".nav__content__icon__mobile__sidebar");
-let overlayModel = $(".nav__content__icon__mobile__overlay");
+let itemSideBar = $(
+  ".nav__content__icon__mobile > .nav__content__icon__mobile__sidebar"
+);
+let overlayModel = $(
+  ".nav__content__icon__mobile > .nav__content__icon__mobile__overlay"
+);
 let navIconBtn = $(".nav__content__icon");
 
 itemLink.forEach((item, index) => {
@@ -23,9 +27,14 @@ itemLink.forEach((item, index) => {
 itemLinkSideBar.forEach((itemSideBar, index) => {
   itemSideBar.onclick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
+
     document
       .getElementById(itemSideBar.getAttribute("data-link"))
       .scrollIntoView({ behavior: "smooth" });
+
+    $(".activeSb").classList.remove("activeSb");
+    $(".activeOl").classList.remove("activeOl");
   };
 });
 
@@ -42,9 +51,16 @@ navIconBtn.onclick = (e) => {
   });
 };
 
-navIconMobileBtn.onclick = () => {};
+navIconMobileBtn.onclick = () => {
+  itemSideBar.classList.add("activeSb");
+  overlayModel.classList.add("activeOl");
+};
 
-overlayModel.onclick = (e) => {};
+overlayModel.onclick = (e) => {
+  e.stopPropagation();
+  $(".activeSb").classList.remove("activeSb");
+  $(".activeOl").classList.remove("activeOl");
+};
 
 // Animate TypingWord
 class animationWords {

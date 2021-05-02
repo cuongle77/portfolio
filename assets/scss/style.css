@@ -399,14 +399,16 @@ html {
   position: fixed;
   height: 100%;
   top: 0;
-  width: 25%;
+  width: 300px;
   right: 0;
   background-color: #ffffff;
   padding: 30px;
   z-index: 2;
-  display: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 #nav .nav__content__wrap .nav__content__icon__mobile__sidebar a {
@@ -428,6 +430,12 @@ html {
   padding-left: 2rem;
 }
 
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar.activeSb {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+}
+
 #nav .nav__content__wrap .nav__content__icon__mobile__overlay {
   position: fixed;
   top: 0;
@@ -436,9 +444,15 @@ html {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
-  display: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#nav .nav__content__wrap .nav__content__icon__mobile__overlay.activeOl {
+  opacity: 1;
+  visibility: visible;
 }
 
 #home {
