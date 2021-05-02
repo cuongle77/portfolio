@@ -14,6 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css" />
+    <link rel="stylesheet" href="./node_modules/wow.js/css/libs/animate.css" />
     <link rel="stylesheet" href="./assets/scss/grid.css" />
     <link rel="stylesheet" href="./assets/scss/style.css" />
     <title>Lê Trung Cương - My CV</title>
@@ -51,6 +53,18 @@
                 <a href="" data-link="resume">Resume</a>
                 <a href="" data-link="project">Project</a>
                 <a href="" data-link="contact">Contact</a>
+
+                <div class="sidebar__contact">
+                  <h2>Contacts</h2>
+                  <div class="sidebar__contact__link">
+                    <a href="https://github.com/leecuong2k">
+                      <i class="flaticon-facebook-app-symbol"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/trungcuongle2k/">
+                      <i class="flaticon-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div class="nav__content__icon__mobile__overlay"></div>
@@ -64,8 +78,8 @@
           <div class="row">
             <div class="col l-6 m-12">
               <div class="home__info__overview">
-                <h2>Hello !</h2>
-                <h1>
+                <h2 class="wow animate__fadeInLeft">Hello !</h2>
+                <h1 class="wow animate__fadeInLeft">
                   I'm
                   <span
                     class="typing__words"
@@ -73,7 +87,7 @@
                     data-words='["Le Trung Cuong", "a Front-end Developer"]'
                   ></span>
                 </h1>
-                <p>
+                <p class="wow animate__fadeInLeft">
                   I'm passionate about learning new technologies and always keep
                   concentrated on improving my self skills. Being patient and
                   responsible for working help me implement completely assigned
@@ -92,7 +106,7 @@
 
             <div class="col l-6 c-0">
               <div class="home__info__link">
-                <div class="home__info__link__img">
+                <div class="home__info__link__img wow animate__fadeInRight">
                   <img
                     src="./assets/images/person.png"
                     alt=""
@@ -146,16 +160,17 @@
       <div id="about" class="home__spacing">
         <div class="about__background"></div>
         <div class="grid wide grid--custom">
-          <div class="about__content">
-            <h2 class="section__title">
+          <div class="about__content wow animate__zoomIn">
+            <h2 class="section__title wow animate__zoomIn">
               <span class="section__title--border">About</span>
               <span class="section__title--highlight">Me</span>
             </h2>
 
             <div class="row">
               <div class="col l-6 m-12 c-12">
-                <div class="about__content__img">
+                <div class="about__content__img wow animate__slideInLeft">
                   <img
+                    class=""
                     src="./assets/images/person.png"
                     alt=""
                     width="283px"
@@ -167,28 +182,28 @@
               <div class="col l-6 m-12 c-12">
                 <div class="about__content__info">
                   <ul class="about__content__info__list">
-                    <li>
+                    <li class="wow animate__slideInRight">
                       <div class="field__name">
                         <i class="flaticon-user"></i>
                         <span>Name</span>
                       </div>
                       <p>Le Trung Cuong</p>
                     </li>
-                    <li>
+                    <li class="wow animate__slideInRight">
                       <div class="field__name">
                         <i class="flaticon-pin"></i>
                         <span>Address</span>
                       </div>
                       <p>District 7, Ho Chi Minh City</p>
                     </li>
-                    <li>
+                    <li class="wow animate__slideInRight">
                       <div class="field__name">
                         <i class="flaticon-email"></i>
                         <span>Email</span>
                       </div>
                       <p>letrungcuong2k@gmail.com</p>
                     </li>
-                    <li>
+                    <li class="wow animate__slideInRight">
                       <div class="field__name">
                         <i class="flaticon-call"></i>
                         <span>Phone</span>
@@ -198,13 +213,25 @@
                   </ul>
 
                   <div class="about__content__info__icon__link">
-                    <a href="">
+                    <a
+                      href=""
+                      class="wow animate__slideInRight"
+                      data-wow-delay="0.1s"
+                    >
                       <i class="flaticon-facebook-app-symbol"></i>
                     </a>
-                    <a href="">
+                    <a
+                      href=""
+                      class="wow animate__slideInRight"
+                      data-wow-delay="0.2s"
+                    >
                       <i class="flaticon-github"></i>
                     </a>
-                    <a href="">
+                    <a
+                      href=""
+                      class="wow animate__slideInRight"
+                      data-wow-delay="0.3s"
+                    >
                       <i class="flaticon-linkedin"></i>
                     </a>
                   </div>
@@ -216,14 +243,14 @@
       </div>
 
       <div id="skills" class="home__spacing">
-        <h2 class="section__title">
+        <h2 class="section__title wow animate__zoomIn">
           <span class="section__title--border">My</span>
           <span class="section__title--highlight">Skills</span>
         </h2>
 
         <div class="grid wide knowledge__skills">
           <ul class="knowledge__skills__list">
-            <li>
+            <li class="wow animate__slideInRight">
               <span class="field__name">Programming Languages</span>
               <div class="list__item">
                 <span>Javascript</span>
@@ -232,7 +259,7 @@
               </div>
             </li>
 
-            <li>
+            <li class="wow animate__slideInRight">
               <span class="field__name">Framework/ Platform</span>
               <div class="list__item">
                 <span>Reactjs basic</span>
@@ -242,14 +269,14 @@
               </div>
             </li>
 
-            <li>
+            <li class="wow animate__slideInRight">
               <span class="field__name">Version Control</span>
               <div class="list__item">
                 <span>Git basic</span>
               </div>
             </li>
 
-            <li>
+            <li class="wow animate__slideInRight">
               <span class="field__name">Sort Skills</span>
               <div class="list__item">
                 <span>Teamwork</span>
@@ -278,7 +305,7 @@
 
       <div id="resume" class="home__spacing">
         <div class="resume__bg__decor"></div>
-        <h2 class="section__title">
+        <h2 class="section__title wow animate__zoomIn">
           <span class="section__title--border">My</span>
           <span class="section__title--highlight">Resume</span>
         </h2>
@@ -287,7 +314,7 @@
           <div class="resume__content">
             <div class="row">
               <div class="col l-6 m-12 c-12">
-                <div class="resume__block">
+                <div class="resume__block wow animate__slideInUp">
                   <h4 class="resume__block__title">
                     Cybersoft - Cyberlearn Programing Education Center
                   </h4>
@@ -312,7 +339,7 @@
       </div>
 
       <div id="project" class="home__spacing">
-        <h2 class="section__title">
+        <h2 class="section__title wow animate__zoomIn">
           <span class="section__title--border">My</span>
           <span class="section__title--highlight">Project</span>
         </h2>
@@ -725,7 +752,9 @@
 
             <div class="row">
               <div class="col l-4 m-12 c-12">
-                <div class="project__content__block__item">
+                <div
+                  class="project__content__block__item wow animate__slideInUp"
+                >
                   <h4>Vivi video</h4>
                   <span>Reactjs + Redux + Hooks</span>
                   <div class="project__content__block__item__details">
@@ -740,7 +769,7 @@
               </div>
             </div>
 
-            <div class="project__content__btn">
+            <div class="project__content__btn wow animate__slideInUp">
               <a
                 href="https://github.com/leecuong2k"
                 class="project__content__btn__link"
@@ -753,7 +782,7 @@
       </div>
 
       <div id="contact" class="home__spacing">
-        <h2 class="section__title">
+        <h2 class="section__title wow animate__zoomIn">
           Get in touch with
           <span class="section__title--border section__title--highlight"
             >Me</span
@@ -764,17 +793,23 @@
           <div class="contact__content">
             <div class="row">
               <div class="col l-6 m-12 c-12">
-                <div class="contact__content__email">
+                <div class="contact__content__email wow animate__slideInLeft">
                   <p>letrungcuong2k@gmail.com</p>
                 </div>
               </div>
 
               <div class="col l-6 m-12 c-12">
                 <div class="contact__content__socials">
-                  <a href="https://www.facebook.com/leecuong2k" target="_blank"
+                  <a
+                    class="wow animate__slideInRight"
+                    data-wow-delay="0.1s"
+                    href="https://www.facebook.com/leecuong2k"
+                    target="_blank"
                     ><i class="flaticon-facebook-app-symbol"></i
                   ></a>
                   <a
+                    class="wow animate__slideInRight"
+                    data-wow-delay="0.2s"
                     href="https://www.linkedin.com/in/trungcuongle2k/"
                     target="_blank"
                     ><i class="flaticon-linkedin"></i
@@ -794,6 +829,7 @@
         <i class="flaticon-up-arrow-angle"></i>
       </div>
     </div>
+    <script src="./node_modules/wow.js/dist/wow.min.js"></script>
     <script type="module" src="./assets/JS/index.js"></script>
   </body>
 </html>

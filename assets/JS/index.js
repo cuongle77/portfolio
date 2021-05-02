@@ -1,3 +1,5 @@
+new WOW().init();
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -89,7 +91,7 @@ animationWords.prototype.typingWords = function () {
 
   this.tagContainWords.innerHTML = `<span>${this.word}</span>`;
 
-  let speedTypingWords = 200;
+  let speedTypingWords = 80;
   if (this.removeWords) {
     speedTypingWords /= 2;
   }
