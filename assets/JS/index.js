@@ -1,5 +1,3 @@
-new WOW().init();
-
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -191,3 +189,5 @@ let handleToTop = () => {
 
 window.addEventListener("DOMContentLoaded", handleToTop);
 window.addEventListener("scroll", handleToTop);
+
+new WOW().init();
