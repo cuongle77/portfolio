@@ -13,6 +13,9 @@ let overlayModel = $(
   ".nav__content__icon__mobile > .nav__content__icon__mobile__overlay"
 );
 let navIconBtn = $(".nav__content__icon");
+let navSideBarClose = $(
+  ".nav__content__icon__mobile__sidebar > .sidebar__close"
+);
 
 itemLink.forEach((item, index) => {
   item.onclick = (e) => {
@@ -56,6 +59,12 @@ navIconBtn.onclick = (e) => {
 navIconMobileBtn.onclick = () => {
   itemSideBar.classList.add("activeSb");
   overlayModel.classList.add("activeOl");
+};
+
+navSideBarClose.onclick = (e) => {
+  e.stopPropagation();
+  $(".activeSb").classList.remove("activeSb");
+  $(".activeOl").classList.remove("activeOl");
 };
 
 overlayModel.onclick = (e) => {

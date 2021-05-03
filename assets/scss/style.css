@@ -414,7 +414,11 @@ html {
           transform: translateX(100%);
 }
 
-#nav .nav__content__wrap .nav__content__icon__mobile__sidebar a {
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__list {
+  margin-top: 50px;
+}
+
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__list a {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -428,7 +432,7 @@ html {
   transition: all 0.5s;
 }
 
-#nav .nav__content__wrap .nav__content__icon__mobile__sidebar a:hover {
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__list a:hover {
   color: #ea6dc4;
   padding-left: 1rem;
 }
@@ -446,8 +450,10 @@ html {
 }
 
 #nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__contact__link a {
+  text-decoration: none;
   display: inline-block;
   border: 1px solid #ffffff;
+  color: #ffffff;
   border-radius: 50%;
   padding: 1rem;
   margin-right: 15px;
@@ -465,6 +471,32 @@ html {
   display: block;
   line-height: 0;
   font-size: 1.2rem;
+}
+
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__close {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__close i {
+  display: block;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+#nav .nav__content__wrap .nav__content__icon__mobile__sidebar .sidebar__close.activeExit {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
 }
 
 #nav .nav__content__wrap .nav__content__icon__mobile__sidebar.activeSb {
@@ -1031,12 +1063,14 @@ html {
 #skills::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   background-image: url("/assets/images/bg_decor.svg");
   background-repeat: no-repeat;
   width: 35%;
   height: 25%;
+  background-position: center center;
+  background-size: cover;
   z-index: -1;
 }
 
@@ -1518,6 +1552,11 @@ html {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  #skills::before {
+    width: 50%;
+    height: 20%;
+    bottom: 70px;
+  }
   #skills .knowledge__skills {
     width: 85%;
   }
@@ -1564,6 +1603,11 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #skills::before {
+    width: 50%;
+    height: 20%;
+    bottom: 70px;
   }
   #skills .section__title {
     margin-bottom: 50px;
@@ -1694,6 +1738,10 @@ html {
   }
   #about .grid--custom .about__content__info__icon__link a i {
     font-size: 1.2rem;
+  }
+  #skills::before {
+    height: 15%;
+    bottom: 40px;
   }
   #skills .section__title {
     font-size: 3rem;

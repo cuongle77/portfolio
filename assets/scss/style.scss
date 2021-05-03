@@ -133,19 +133,22 @@
           opacity: 0;
           transform: translateX(100%);
 
-          a {
-            display: block;
-            width: fit-content;
-            text-decoration: none;
-            font-size: 1.8rem;
-            color: $white-color;
-            padding: 1rem 1.2rem 1rem 0px;
-            margin-bottom: 20px;
-            transition: all 0.5s;
+          .sidebar__list {
+            margin-top: 50px;
+            a {
+              display: block;
+              width: fit-content;
+              text-decoration: none;
+              font-size: 1.8rem;
+              color: $white-color;
+              padding: 1rem 1.2rem 1rem 0px;
+              margin-bottom: 20px;
+              transition: all 0.5s;
 
-            &:hover {
-              color: $bg-added;
-              padding-left: 1rem;
+              &:hover {
+                color: $bg-added;
+                padding-left: 1rem;
+              }
             }
           }
 
@@ -161,8 +164,10 @@
 
             &__link {
               a {
+                text-decoration: none;
                 display: inline-block;
                 border: 1px solid $white-color;
+                color: $white-color;
                 border-radius: 50%;
                 padding: 1rem;
                 margin-right: 15px;
@@ -181,6 +186,29 @@
                 }
               }
             }
+          }
+
+          .sidebar__close {
+            display: inline-block;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            cursor: pointer;
+            i {
+              display: block;
+              color: $white-color;
+              font-size: 2rem;
+              line-height: 0;
+            }
+          }
+
+          .sidebar__close.activeExit {
+            transform: translateX(0%);
+            opacity: 1;
           }
         }
 
@@ -682,12 +710,14 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     left: 0;
     background-image: url("/assets/images/bg_decor.svg");
     background-repeat: no-repeat;
     width: 35%;
     height: 25%;
+    background-position: center center;
+    background-size: cover;
     z-index: -1;
   }
 
@@ -1156,6 +1186,12 @@
   }
 
   #skills {
+    &::before {
+      width: 50%;
+      height: 20%;
+      bottom: 70px;
+    }
+
     .knowledge__skills {
       width: 85%;
       li {
@@ -1240,6 +1276,12 @@
   }
 
   #skills {
+    &::before {
+      width: 50%;
+      height: 20%;
+      bottom: 70px;
+    }
+
     .section__title {
       margin-bottom: 50px;
     }
@@ -1425,6 +1467,11 @@
   }
 
   #skills {
+    &::before {
+      height: 15%;
+      bottom: 40px;
+    }
+
     .section__title {
       font-size: 3rem;
       margin-bottom: 40px;
