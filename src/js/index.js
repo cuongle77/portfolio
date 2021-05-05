@@ -129,7 +129,6 @@ const run = () => {
 document.addEventListener("DOMContentLoaded", run);
 
 // HOME
-
 let homeLinkBtn = $(".home__info__link__share__btn");
 
 homeLinkBtn.onclick = () => {

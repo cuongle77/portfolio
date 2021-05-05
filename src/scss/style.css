@@ -1090,8 +1090,6 @@ html {
 #skills .knowledge__skills__list:hover > li {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
 }
 
 #skills .knowledge__skills__list:hover > li > .list__item > span {
@@ -1327,8 +1325,8 @@ html {
 }
 
 #project .project__content__block__item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 #project .project__content__block__item h4 {
@@ -1340,7 +1338,17 @@ html {
 #project .project__content__block__item span {
   display: inline-block;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+}
+
+#project .project__content__block__item__img {
+  padding: 20px 0;
+}
+
+#project .project__content__block__item__img img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #project .project__content__block__item__details {
@@ -1353,7 +1361,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 50px;
 }
 
 #project .project__content__block__item__details i {

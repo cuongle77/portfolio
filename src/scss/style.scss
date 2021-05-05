@@ -735,7 +735,6 @@
       &:hover {
         > li {
           transform: scale(0.9);
-          filter: blur(3px);
         }
 
         > li > .list__item > span {
@@ -744,6 +743,7 @@
           transform: scale(0);
         }
       }
+
       li {
         margin: 0px 0 50px;
         background-color: $white-color;
@@ -956,8 +956,9 @@
       transition: all 0.5s;
 
       &:hover {
-        transform: scale(1.1);
+        transform: translateY(-10px);
       }
+
       h4 {
         font-size: 1.8rem;
         font-weight: 700;
@@ -967,14 +968,21 @@
       span {
         display: inline-block;
         font-size: 1.5rem;
-        margin-bottom: 10px;
+      }
+
+      &__img {
+        padding: 20px 0;
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
       }
 
       &__details {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 50px;
         i {
           display: inline-block;
           font-size: 3rem;
