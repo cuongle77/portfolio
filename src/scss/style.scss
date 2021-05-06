@@ -126,7 +126,7 @@
           width: 300px;
           right: 0;
           background-color: $primary-bg;
-          background-image: url("../images/bg.svg");
+          background-image: url("../assets/img/SVG/bg.svg");
           padding: 30px;
           z-index: 2;
           transition: all 0.5s;
@@ -1162,6 +1162,20 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1239px) {
+  #nav {
+    .nav__content__wrap {
+      .nav__content {
+        &__icon__mobile {
+          &__sidebar {
+            .sidebar__contact {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   #home {
     padding-top: 200px;
   }
@@ -1233,9 +1247,6 @@
   }
 
   #project {
-    .section__title {
-    }
-
     .project__content {
       &__absolute--one {
         left: 0;
@@ -1244,14 +1255,25 @@
       &__absolute--two {
         right: 0;
       }
-
-      &__block__item {
-      }
     }
   }
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
+  #nav {
+    .nav__content__wrap {
+      .nav__content {
+        &__icon__mobile {
+          &__sidebar {
+            .sidebar__contact {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   #home {
     .home__info__overview {
       h2 {
@@ -1378,6 +1400,46 @@
 
         &__icon__mobile {
           display: block;
+          &__btn {
+            width: 40px;
+            height: 40px;
+
+            i {
+              font-size: 2rem;
+            }
+          }
+
+          &__sidebar {
+            .sidebar__list {
+              margin-top: 40px;
+              a {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+              }
+            }
+            .sidebar__contact {
+              margin-top: 30px;
+
+              h2 {
+                font-size: 1.8rem;
+              }
+
+              &__link {
+                a {
+                  padding: 0.8rem;
+                  i {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+
+            .sidebar__close {
+              i {
+                font-size: 1.5rem;
+              }
+            }
+          }
         }
       }
     }
@@ -1614,11 +1676,10 @@
   }
 
   #back__to__top {
-    right: 50%;
-    transform: translateX(50%);
+    right: 10px;
     bottom: 40px;
     i {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
   }
 }

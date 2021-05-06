@@ -4,7 +4,9 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 let itemLink = $$(".nav__content__icon__menu > li > a");
-let itemLinkSideBar = $$(".nav__content__icon__mobile__sidebar > a");
+let itemLinkSideBar = $$(
+  ".nav__content__icon__mobile__sidebar > .sidebar__list > a"
+);
 let navIconMobileBtn = $(".nav__content__icon__mobile");
 let itemSideBar = $(
   ".nav__content__icon__mobile > .nav__content__icon__mobile__sidebar"
