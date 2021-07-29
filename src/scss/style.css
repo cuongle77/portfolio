@@ -308,6 +308,12 @@ html {
   border: 2px solid #ffffff;
   width: 50px;
   height: 50px;
+  -webkit-transition: border 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
+}
+
+#nav .nav__content__wrap .nav__content__icon__btn:hover {
+  border-color: transparent;
 }
 
 #nav .nav__content__wrap .nav__content__icon__btn i {
@@ -545,6 +551,10 @@ html {
   font-weight: 500;
   color: #ffffff;
   padding-bottom: 7rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #home .home__info__overview h1 {
@@ -553,6 +563,10 @@ html {
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 7rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #home .home__info__overview p {
@@ -563,6 +577,10 @@ html {
   word-spacing: 2px;
   line-height: 1.8;
   margin-bottom: 7rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #home .home__info__overview button {
@@ -590,6 +608,10 @@ html {
   font-size: 1.5rem;
   padding: 0.8rem 1.7rem;
   font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #home .home__info__overview button a i {
@@ -690,6 +712,12 @@ html {
   cursor: pointer;
   position: relative;
   border: 1px solid #ffffff;
+  -webkit-transition: border 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
+}
+
+#home .home__info__link__share__btn:hover {
+  border-color: transparent;
 }
 
 #home .home__info__link__share__btn:hover .home__info__link__share__btn__list {
@@ -818,6 +846,10 @@ html {
   position: relative;
   text-transform: uppercase;
   font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #home .home__info__link__share__text::before {
@@ -1444,8 +1476,9 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #a29bfe;
+  background-color: #ea6dc4;
   height: 12px;
+  opacity: 0.7;
   border-radius: 15px;
   z-index: -1;
 }

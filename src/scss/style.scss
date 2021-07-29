@@ -37,6 +37,11 @@
           border: 2px solid $white-color;
           width: 50px;
           height: 50px;
+          transition: border 0.25s ease-in-out;
+
+          &:hover {
+            border-color: transparent;
+          }
 
           i {
             display: block;
@@ -257,6 +262,7 @@
       font-weight: 500;
       color: $white-color;
       padding-bottom: 7rem;
+      user-select: none;
     }
 
     h1 {
@@ -265,6 +271,7 @@
       color: $white-color;
       line-height: 1.2;
       margin-bottom: 7rem;
+      user-select: none;
     }
 
     p {
@@ -275,6 +282,7 @@
       word-spacing: 2px;
       line-height: 1.8;
       margin-bottom: 7rem;
+      user-select: none;
     }
 
     button {
@@ -295,6 +303,7 @@
         font-size: 1.5rem;
         padding: 0.8rem 1.7rem;
         font-weight: 600;
+        user-select: none;
 
         i {
           display: inline-block;
@@ -378,8 +387,11 @@
         cursor: pointer;
         position: relative;
         border: 1px solid $white-color;
+        transition: border 0.25s ease-in-out;
 
         &:hover {
+          border-color: transparent;
+
           .home__info__link__share__btn__list {
             top: 10px;
             left: 107px;
@@ -488,6 +500,7 @@
         position: relative;
         text-transform: uppercase;
         font-weight: 600;
+        user-select: none;
 
         &::before {
           content: "";
@@ -1051,8 +1064,9 @@
           bottom: 0;
           left: 0;
           width: 100%;
-          background-color: $shy-moment;
+          background-color: $bg-added;
           height: 12px;
+          opacity: 0.7;
           border-radius: 15px;
           z-index: -1;
         }
