@@ -656,6 +656,10 @@ html {
           box-shadow: 0px 0px 15px -5px #000;
   position: relative;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #home .home__info__link__img::before {
@@ -908,10 +912,6 @@ html {
   border-radius: 50%;
   -webkit-animation: mouseMove 4s 1s infinite;
           animation: mouseMove 4s 1s infinite;
-}
-
-.home__spacing {
-  padding: 100px 0;
 }
 
 #about {
@@ -1254,24 +1254,25 @@ html {
 #resume .resume__content .resume__block__title {
   font-size: 2rem;
   font-weight: 500;
+  text-align: center;
   line-height: 1.4;
   color: #610a2d;
   margin-bottom: 10px;
 }
 
-#resume .resume__content .resume__block__time {
+#resume .resume__content .resume__block-wrap .resume__block__time {
   display: inline-block;
   color: dodgerblue;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-#resume .resume__content .resume__block__item {
+#resume .resume__content .resume__block-wrap .resume__block__item {
   line-height: 1.5;
   margin-left: 15px;
 }
 
-#resume .resume__content .resume__block__item .field__name {
+#resume .resume__content .resume__block-wrap .resume__block__item .field__name {
   font-size: 1.4rem;
   color: #000;
   font-weight: 600;
@@ -1279,7 +1280,7 @@ html {
   position: relative;
 }
 
-#resume .resume__content .resume__block__item .field__name::before {
+#resume .resume__content .resume__block-wrap .resume__block__item .field__name::before {
   content: "";
   position: absolute;
   left: -15px;
@@ -1292,7 +1293,7 @@ html {
   background-color: #000;
 }
 
-#resume .resume__content .resume__block__item .field__value {
+#resume .resume__content .resume__block-wrap .resume__block__item .field__value {
   font-size: 1.3rem;
   color: #ea6dc4;
   font-weight: unset !important;
@@ -1548,6 +1549,10 @@ html {
   font-size: 2.2rem;
   color: #ffffff;
   line-height: 0;
+}
+
+.home__spacing {
+  padding: 100px 0;
 }
 
 @media (max-width: 1239px) {
@@ -1949,4 +1954,4 @@ html {
     word-spacing: 2px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

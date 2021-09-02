@@ -1,0 +1,609 @@
+// reset
+@import "./reset";
+
+// base
+@import "./base";
+
+// variables
+@import "./variables";
+
+// mixins
+@import "./mixins";
+
+// components
+@import "./components/component";
+
+.home__spacing {
+  padding: 100px 0;
+}
+
+// RESPONSIVE
+@media (max-width: 1239px) {
+  #nav {
+    .nav__content__wrap {
+      .nav__content {
+        &__icon {
+          display: none;
+        }
+
+        &__icon__mobile {
+          display: block;
+        }
+      }
+    }
+  }
+
+  #home {
+    .home__info__overview {
+      h2 {
+        padding-bottom: 4rem;
+      }
+
+      h1 {
+        margin-bottom: 4rem;
+      }
+
+      p {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .home__info__link {
+      padding-left: 0;
+      align-items: center;
+
+      &__img {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  #nav {
+    .nav__content__wrap {
+      .nav__content {
+        &__icon__mobile {
+          &__sidebar {
+            .sidebar__contact {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #home {
+    padding-top: 200px;
+  }
+
+  #about {
+    .grid--custom {
+      width: 95%;
+      .about__content {
+        padding: 45px 30px;
+
+        &__info {
+          &__icon__link {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  #skills {
+    &::before {
+      width: 50%;
+      height: 20%;
+      bottom: 70px;
+    }
+
+    .knowledge__skills {
+      width: 85%;
+      li {
+        margin: 0px 0px 30px;
+      }
+    }
+  }
+
+  #resume {
+    .section__title {
+      margin-bottom: 50px;
+    }
+
+    .resume__content {
+      .resume__block {
+        &__title {
+          font-size: 1.5rem;
+        }
+
+        &__item {
+          .field__name {
+            font-size: 1.3rem;
+          }
+
+          .field__value {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  #project {
+    .project__content {
+      &__absolute--one {
+        left: 0;
+      }
+
+      &__absolute--two {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  #nav {
+    .nav__content__wrap {
+      .nav__content {
+        &__icon__mobile {
+          &__sidebar {
+            .sidebar__contact {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #home {
+    .home__info__overview {
+      h2 {
+        padding-bottom: 4rem;
+      }
+
+      h1 {
+        margin-bottom: 4rem;
+      }
+
+      p {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  #about {
+    .grid--custom {
+      width: 95%;
+      .about__content {
+        padding: 45px 30px;
+
+        &__info {
+          &__icon__link {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  #skills {
+    &::before {
+      width: 50%;
+      height: 20%;
+      bottom: 70px;
+    }
+
+    .section__title {
+      margin-bottom: 50px;
+    }
+
+    .knowledge__skills {
+      width: 85%;
+      li {
+        margin: 0px 0px 20px;
+        padding: 5px 20px;
+        .field__name {
+          font-size: 1.2rem;
+          min-width: 150px;
+          margin-right: 0px;
+          margin-left: 5px;
+
+          &::before {
+            width: 5px;
+            height: 5px;
+            left: -10px;
+          }
+        }
+
+        .list__item {
+          span {
+            font-size: 1rem;
+            margin-right: 5px;
+            padding: 0.5rem 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  #resume {
+    .section__title {
+      margin-bottom: 50px;
+    }
+
+    .resume__content {
+      .resume__block {
+        &__title {
+          font-size: 2.3rem;
+        }
+
+        &__item {
+          .field__name {
+            font-size: 1.6rem;
+          }
+
+          .field__value {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    .section__title {
+      margin-bottom: 40px;
+    }
+
+    .contact__content {
+      &__email {
+        padding-bottom: 50px;
+
+        p {
+          font-size: 2.5rem;
+
+          &::before {
+            height: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 739px) {
+  #nav {
+    .nav__content__wrap {
+      .nav__content {
+        &__icon {
+          display: none;
+        }
+
+        &__icon__mobile {
+          display: block;
+          &__btn {
+            width: 40px;
+            height: 40px;
+
+            i {
+              font-size: 2rem;
+            }
+          }
+
+          &__sidebar {
+            .sidebar__list {
+              margin-top: 40px;
+              a {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+              }
+            }
+            .sidebar__contact {
+              margin-top: 30px;
+
+              h2 {
+                font-size: 1.8rem;
+              }
+
+              &__link {
+                a {
+                  padding: 0.8rem;
+                  i {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+
+            .sidebar__close {
+              i {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #home {
+    padding-top: 150px;
+    height: auto;
+    .home__info__overview {
+      h2 {
+        font-size: 1.8rem;
+        padding-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+      }
+
+      button {
+        margin-bottom: 5rem;
+      }
+
+      .box__shadow__info {
+        display: none;
+      }
+    }
+
+    .mouse__space__decoration {
+      display: none;
+    }
+  }
+
+  .home__spacing {
+    padding: 30px 0;
+  }
+
+  #about {
+    .grid--custom {
+      width: 95%;
+      .about__content {
+        padding: 30px 15px;
+
+        .section__title {
+          font-size: 3rem;
+          margin-bottom: 60px;
+        }
+
+        &__info {
+          &__list {
+            li {
+              margin-bottom: 20px;
+
+              &::before {
+                height: 1px;
+              }
+              .field__name {
+                min-width: 100px;
+                margin-right: 10px;
+                i {
+                  font-size: 1rem;
+                }
+
+                span {
+                  font-size: 1.2rem;
+                }
+              }
+
+              p {
+                font-size: 1.2rem;
+                letter-spacing: 0.5px;
+              }
+            }
+          }
+
+          &__icon__link {
+            margin-top: 30px;
+            justify-content: center;
+            a {
+              margin-right: 20px;
+              padding: 10px;
+              i {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #skills {
+    &::before {
+      height: 15%;
+      bottom: 40px;
+    }
+
+    .section__title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .knowledge__skills {
+      width: 85%;
+      li {
+        margin: 0px 0px 20px;
+        padding: 5px 20px;
+
+        &:hover {
+          .field__name {
+            display: none;
+          }
+
+          .list__item {
+            display: block;
+          }
+        }
+
+        .field__name {
+          font-size: 1rem;
+          min-width: 150px;
+          margin-right: 0px;
+          margin-left: 5px;
+
+          &::before {
+            width: 3px;
+            height: 3px;
+            left: -10px;
+          }
+        }
+
+        .list__item {
+          display: none;
+          span {
+            font-size: 0.8rem;
+            margin-right: 3px;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #resume {
+    .section__title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    .resume__content {
+      padding: 0 12px;
+
+      .resume__block {
+        &__title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  #project {
+    .section__title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .project__content {
+      padding: 0 12px;
+
+      &__absolute--one {
+        width: 80px;
+        height: 80px;
+        left: 0;
+        top: -10px;
+      }
+
+      &__absolute--two {
+        width: 80px;
+        height: 80px;
+        right: 0;
+        bottom: 45px;
+      }
+
+      &__block__item {
+        transform: scale(0.9);
+        margin-bottom: 0;
+
+        &:hover {
+          transform: scale(1);
+        }
+      }
+
+      &__btn {
+        margin-top: 15px;
+
+        &__link {
+          padding: 1.2rem 3rem;
+        }
+      }
+    }
+  }
+
+  #contact {
+    .section__title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .contact__content {
+      padding: 0 12px;
+      &__email {
+        padding-bottom: 30px;
+
+        p {
+          font-size: 2rem;
+
+          &::before {
+            height: 8px;
+          }
+        }
+      }
+
+      &__socials {
+        padding-bottom: 30px;
+        a {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  #back__to__top {
+    right: 10px;
+    bottom: 40px;
+    i {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #about {
+    .grid--custom {
+      .about__content {
+        &__info {
+          &__list {
+            li {
+              .field__name {
+                i {
+                  margin-right: 2px;
+                }
+                min-width: 70px;
+                margin-right: 5px;
+                padding: 0.2rem 1rem;
+
+                span {
+                  font-size: 1rem;
+                }
+              }
+
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    .section__title {
+      font-size: 2.5rem;
+      word-spacing: 2px;
+    }
+  }
+}
