@@ -4,10 +4,6 @@
 
   .section__title {
     margin-bottom: 100px;
-
-    &--border {
-      color: $white-color;
-    }
   }
 
   .project__content {
@@ -106,7 +102,7 @@
         text-decoration: none;
         display: inline-block;
         padding: 1.4rem 4rem;
-        background-color: $bg-added;
+        background-color: $primary-color;
         color: $white-color;
         border-radius: 30px;
         box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 0.6);

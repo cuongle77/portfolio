@@ -1,8 +1,13 @@
 #contact {
   overflow: hidden;
+
   .section__title {
     color: $black-color;
     margin-bottom: 100px;
+
+    &--highlight {
+      color: $primary-color;
+    }
   }
 
   .contact__content {
@@ -25,7 +30,7 @@
           bottom: 0;
           left: 0;
           width: 100%;
-          background-color: $bg-added;
+          background-color: $primary-color;
           height: 12px;
           opacity: 0.7;
           border-radius: 15px;
@@ -38,9 +43,12 @@
       display: flex;
       justify-content: center;
       a {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-decoration: none;
-        padding: 15px;
+        width: 46px;
+        height: 46px;
         border-radius: 50%;
         border: 1px solid $bg-added;
         margin-right: 20px;

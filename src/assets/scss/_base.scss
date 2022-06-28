@@ -9,6 +9,7 @@ html {
   line-height: 1.6;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  background: #f3f3f3;
 }
 
 .ptb-100 {
@@ -81,6 +82,7 @@ html {
 
   &--border {
     position: relative;
+    color: $primary-color;
     &::before {
       content: "";
       position: absolute;
@@ -93,6 +95,6 @@ html {
   }
 
   &--highlight {
-    color: $bg-added;
+    color: $white-color;
   }
 }

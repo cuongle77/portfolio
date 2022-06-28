@@ -1,18 +1,21 @@
 #back__to__top {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   right: 50px;
   bottom: 30px;
-  padding: 10px;
-  background-color: $bg-added;
-  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background: $primary-color;
+  border-radius: 100rem;
   cursor: pointer;
   z-index: 999;
   border: 2px solid $white-color;
 
-  i {
-    display: block;
-    font-size: 2.2rem;
-    color: $white-color;
-    line-height: 0;
+  > svg {
+    path {
+      stroke: $white-color;
+    }
   }
 }

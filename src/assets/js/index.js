@@ -3,35 +3,68 @@ new WOW().init();
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-let itemLink = $$(".nav__content__icon__menu > li > a");
-let itemLinkSideBar = $$(
+const menuFixedIcon = $$('#menu-fixed .menu-fixed-item-icon');
+const sectionBlock = $$(".home__spacing");
+const itemLinkSideBar = $$(
   ".nav__content__icon__mobile__sidebar > .sidebar__list > a"
 );
-let navIconMobileBtn = $(".nav__content__icon__mobile");
-let itemSideBar = $(
+
+const menuFixed = $('#menu-fixed');
+const btnShowFixedMenu = $('.btn-hidden-menu button');
+const navIconMobileBtn = $(".nav__content__icon__mobile");
+const itemSideBar = $(
   ".nav__content__icon__mobile > .nav__content__icon__mobile__sidebar"
 );
-let overlayModel = $(
+const overlayModel = $(
   ".nav__content__icon__mobile > .nav__content__icon__mobile__overlay"
 );
-let navIconBtn = $(".nav__content__icon");
-let navSideBarClose = $(
+const homeLinkBtn = $(".home__info__link__share__btn");
+const navSideBarClose = $(
   ".nav__content__icon__mobile__sidebar > .sidebar__close"
 );
 
-itemLink.forEach((item, index) => {
-  item.onclick = (e) => {
-    e.preventDefault();
+const scrollActionSection = () => {
+  let current = '';
+  const { pageYOffset } = window;
+  sectionBlock.forEach(item => {
+    const section = item.offsetTop;
+    const sectionHeight = item.clientHeight;
+    if (pageYOffset >= (section - sectionHeight / 3)) current = item.getAttribute('id');
+  });
+
+  menuFixedIcon.forEach((item) => {
+    const dataLink = item.getAttribute('data-link');
+    if (current === dataLink) item.classList.add("active");
+    else item.classList.remove("active");
+  });
+}
+
+menuFixedIcon.forEach((item) => {
+  item.onclick = () => {
     $(".active").classList.remove("active");
     item.classList.add("active");
 
     document
       .getElementById(item.getAttribute("data-link"))
       .scrollIntoView({ behavior: "smooth" });
-  };
+  }
 });
 
-itemLinkSideBar.forEach((itemSideBar, index) => {
+btnShowFixedMenu.onclick = () => {
+  menuFixed.classList.toggle('hidden')
+}
+
+window.addEventListener('resize', () => {
+  const width = window.innerWidth;
+  const maxWidth = 1239;
+  if (width <= maxWidth) {
+    menuFixed.classList.add('hidden')
+  } else {
+    menuFixed.classList.remove('hidden')
+  }
+});
+
+itemLinkSideBar.forEach((itemSideBar) => {
   itemSideBar.onclick = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -44,19 +77,6 @@ itemLinkSideBar.forEach((itemSideBar, index) => {
     $(".activeOl").classList.remove("activeOl");
   };
 });
-
-navIconBtn.onclick = (e) => {
-  let menuItem = navIconBtn.children[1];
-  let menuItemChild = Array.from(menuItem.children);
-
-  menuItem.style.opacity = "1";
-  menuItem.style.visibility = "visible";
-
-  menuItemChild.forEach((item) => {
-    item.style.transform = "rotateX(360deg)";
-    item.style.margin = "40px 0";
-  });
-};
 
 navIconMobileBtn.onclick = () => {
   itemSideBar.classList.add("activeSb");
@@ -119,7 +139,7 @@ animationWords.prototype.typingWords = function () {
   setTimeout(() => this.typingWords(), speedTypingWords);
 };
 
-const run = () => {
+const runTypingWords = () => {
   const tagContainWords = $(".typing__words");
   const words = JSON.parse(tagContainWords.getAttribute("data-words"));
   const waitTime = tagContainWords.getAttribute("data-waitTime");
@@ -128,76 +148,65 @@ const run = () => {
   new animationWords(tagContainWords, words, waitTime);
 };
 
-document.addEventListener("DOMContentLoaded", run);
-
 // HOME
-let homeLinkBtn = $(".home__info__link__share__btn");
-
 homeLinkBtn.onclick = () => {
-  let homeLinkList = homeLinkBtn.children[1];
+  const { style } = homeLinkBtn.children[1];
 
-  homeLinkList.style.opacity = "1";
-  homeLinkList.style.visibility = "visible";
-  homeLinkList.style.transform = "rotate(-45deg)";
-  homeLinkList.style.top = "10px";
-  homeLinkList.style.left = "107px";
+  style.opacity = "1";
+  style.visibility = "visible";
+  style.transform = "rotate(-45deg)";
+  style.top = "10px";
+  style.left = "107px";
 };
 
-let handleHideShow = () => {
-  let latestScroll = window.pageYOffset;
-  let menuItem = navIconBtn.children[1];
-  let menuItemChild = Array.from(menuItem.children);
+const handleHideShow = () => {
+  const { pageYOffset } = window;
+  const { children } = homeLinkBtn;
+  const { style } = children[1];
 
-  if (latestScroll === 0) {
-    menuItem.style.opacity = "1";
-    menuItem.style.visibility = "visible";
-
-    homeLinkBtn.children[1].style.opacity = "1";
-    homeLinkBtn.children[1].style.visibility = "visible";
-    homeLinkBtn.children[1].style.transform = "rotate(-45deg)";
-    homeLinkBtn.children[1].style.top = "10px";
-    homeLinkBtn.children[1].style.left = "107px";
-
-    menuItemChild.forEach((item) => {
-      item.style.transform = "rotateX(360deg)";
-      item.style.margin = "40px 0";
-    });
+  if (pageYOffset === 0) {
+    style.opacity = "1";
+    style.visibility = "visible";
+    style.transform = "rotate(-45deg)";
+    style.top = "10px";
+    style.left = "107px";
   } else {
-    menuItem.style.opacity = "0";
-    menuItem.style.visibility = "hidden";
-
-    homeLinkBtn.children[1].style.opacity = "0";
-    homeLinkBtn.children[1].style.visibility = "hidden";
-    homeLinkBtn.children[1].style.transform = "rotate(0deg)";
-    homeLinkBtn.children[1].style.top = "100%";
-    homeLinkBtn.children[1].style.left = "0";
-
-    menuItemChild.forEach((item) => {
-      item.style.transform = "rotateX(0deg)";
-      item.style.margin = "-24px 0";
-    });
+    style.opacity = "0";
+    style.visibility = "hidden";
+    style.transform = "rotate(0deg)";
+    style.top = "100%";
+    style.left = "0";
   }
 };
-
-window.addEventListener("DOMContentLoaded", handleHideShow);
-window.addEventListener("scroll", handleHideShow);
 
 // BACK__TO__TOP
-let toTopBnt = $("#back__to__top");
-let handleToTop = () => {
-  let latestScroll = window.pageYOffset;
-  if (latestScroll === 0) {
-    toTopBnt.style.opacity = "0";
-    toTopBnt.style.transition = "all 0.5s";
-  } else if (latestScroll >= 1000) {
-    toTopBnt.onclick = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+const toTopBtn = $("#back__to__top");
+const handleScrollToTop = () => {
+  const { pageYOffset, scrollTo } = window;
+  const { style } = toTopBtn;
+  const positionScroll = { top: 0, behavior: "smooth" };
 
-    toTopBnt.style.opacity = "1";
-    toTopBnt.style.transition = "all 0.5s";
+  if (pageYOffset === 0) {
+    style.opacity = "0";
+    style.visibility = "hidden";
+    style.transition = "all 0.5s";
+  } else if (pageYOffset >= 1000) {
+    toTopBtn.onclick = () => scrollTo(positionScroll);
+
+    style.opacity = "1";
+    style.visibility = "visible";
+    style.transition = "all 0.5s";
   }
 };
 
-window.addEventListener("DOMContentLoaded", handleToTop);
-window.addEventListener("scroll", handleToTop);
+window.addEventListener("DOMContentLoaded", () => {
+  handleScrollToTop();
+  handleHideShow();
+  runTypingWords();
+  scrollActionSection();
+});
+window.addEventListener("scroll", () => {
+  handleScrollToTop();
+  handleHideShow();
+  scrollActionSection();
+});
