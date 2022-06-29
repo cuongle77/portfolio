@@ -603,6 +603,7 @@ html {
 
 #menu-fixed .menu-fixed-item-icon > svg:hover + span {
   opacity: 1;
+  visibility: visible;
 }
 
 #menu-fixed .menu-fixed-item-icon span {
@@ -613,6 +614,7 @@ html {
   background: #f89d26;
   border-radius: 4px;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
 }
