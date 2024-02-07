@@ -1,12 +1,8 @@
-# Deployment steps with netlify
+# React + Vite
 
-### `npm install netlify-cli -g`
-  Install global netlify
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### `netlify deploy`
-  Select the group you want to include the project in.\
-  Site name: skip.\
-  deploy path: Select the path to the directory you want to deploy. Here I choose `./src`.
+Currently, two official plugins are available:
 
-### `netlify deploy --prod`
-  Finish deployment.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
